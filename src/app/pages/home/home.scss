@@ -22,6 +22,10 @@
   flex-wrap: wrap;
   gap: 0.75rem;
   margin: 1.25rem 0;
+
+  a[pButton] {
+    text-decoration: none;
+  }
 }
 
 .highlights {
@@ -70,6 +74,19 @@
   align-items: center;
   justify-content: space-between;
   margin-bottom: 1rem;
+}
+
+.stats {
+  margin-bottom: 1.5rem;
+}
+
+.featured {
+  margin-top: 1.5rem;
+}
+
+.card .label {
+  display: block;
+  margin-bottom: 0.2rem;
 }
 
 .project-card .cover {

@@ -8,12 +8,22 @@
 
 .app-menubar {
   border: none;
-  background: var(--surface-card);
+  background: rgba(22, 26, 33, 0.9);
   padding: 0.75rem 1.5rem;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  backdrop-filter: blur(6px);
+  transition: background 0.3s ease, box-shadow 0.3s ease;
 }
 
 .app-menubar ::ng-deep .p-menubar-root-list {
   gap: 1rem;
+}
+
+.app-menubar:hover {
+  background: var(--surface-card);
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.35);
 }
 
 .brand {
@@ -44,6 +54,21 @@
   justify-content: space-between;
   background: var(--surface-card);
   color: var(--text-secondary);
+  position: sticky;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  z-index: 5;
+  align-items: center;
+}
+
+.links {
+  display: flex;
+  gap: 1rem;
+}
+
+.links a {
+  white-space: nowrap;
 }
 
 .app-footer a {

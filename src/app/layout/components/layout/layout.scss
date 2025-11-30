@@ -6,30 +6,11 @@
   color: var(--text-color);
 }
 
-.app-menubar {
-  border: none;
-  background: rgba(22, 26, 33, 0.9);
-  padding: 0.75rem 1.5rem;
-  position: sticky;
-  top: 0;
-  z-index: 10;
-  backdrop-filter: blur(6px);
-  transition: background 0.3s ease, box-shadow 0.3s ease;
-}
-
-.app-menubar ::ng-deep .p-menubar-root-list {
-  gap: 1rem;
-}
-
-.app-menubar:hover {
-  background: var(--surface-card);
-  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.35);
-}
-
 .brand {
   font-weight: 700;
   letter-spacing: 0.5px;
   margin-right: 1.5rem;
+  color: #e9ecf2;
 }
 
 .app-content {
@@ -52,7 +33,7 @@
   flex-wrap: wrap;
   gap: 1rem;
   justify-content: space-between;
-  background: var(--surface-card);
+  background: linear-gradient(90deg, rgba(22, 26, 33, 0.98), rgba(18, 21, 27, 0.98));
   color: var(--text-secondary);
   position: sticky;
   bottom: 0;
@@ -73,4 +54,11 @@
 
 .app-footer a {
   color: var(--primary-color);
+}
+
+@media (max-width: 768px) {
+  .page-container {
+    padding-top: 1rem;
+    gap: 2rem;
+  }
 }

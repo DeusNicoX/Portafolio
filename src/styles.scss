@@ -1,6 +1,6 @@
-// Usamos copias locales del tema para evitar problemas de export en PrimeNG 20.
-@import './styles/primeng-theme.css';
-@import './styles/primeng-core.css';
+// Tema oficial PrimeNG 20 usando configuración JS (preset). No se importan CSS de tema aquí.
+@import 'primeicons/primeicons.css';
+@import 'primeflex/primeflex.css';
 @import 'primeicons/primeicons.css';
 @import 'primeflex/primeflex.css';
 

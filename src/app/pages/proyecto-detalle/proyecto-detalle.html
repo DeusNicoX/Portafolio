@@ -1,0 +1,35 @@
+<section *ngIf="project" class="section detail">
+  <div class="header">
+    <div>
+      <p class="muted">{{ project.anio }} · {{ project.rol }}</p>
+      <h1>{{ project.nombre }}</h1>
+      <p>{{ project.descripcion }}</p>
+      <div class="tags">
+        <p-chip *ngFor="let tech of project.tecnologias" [label]="tech"></p-chip>
+      </div>
+      <a routerLink="/portafolio" class="link">Volver al portafolio</a>
+    </div>
+    <div class="cover placeholder" [ngStyle]="{'background-image': 'url(' + project.portada + ')'}"></div>
+  </div>
+
+  <div class="info-grid">
+    <div class="card-surface info-card">
+      <h3>Rol y alcance</h3>
+      <p>{{ project.rol }} · {{ project.anio }}</p>
+      <p class="muted">Responsable de arquitectura, seguridad, despliegue y métricas.</p>
+    </div>
+    <div class="card-surface info-card">
+      <h3>Tecnologías usadas</h3>
+      <div class="tags">
+        <p-chip *ngFor="let tech of project.tecnologias" [label]="tech"></p-chip>
+      </div>
+    </div>
+  </div>
+
+  <div class="gallery">
+    <h3>Galería</h3>
+    <div class="grid">
+      <div class="thumb placeholder" *ngFor="let img of project.galeria" [ngStyle]="{'background-image': 'url(' + img + ')'}"></div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,51 @@
+:host {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background: var(--background);
+  color: var(--text-color);
+}
+
+.app-menubar {
+  border: none;
+  background: var(--surface-card);
+  padding: 0.75rem 1.5rem;
+}
+
+.app-menubar ::ng-deep .p-menubar-root-list {
+  gap: 1rem;
+}
+
+.brand {
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  margin-right: 1.5rem;
+}
+
+.app-content {
+  flex: 1;
+  padding: 2.5rem 1.25rem 3rem;
+}
+
+.page-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+.app-footer {
+  border-top: 1px solid var(--surface-border);
+  padding: 1rem 1.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: space-between;
+  background: var(--surface-card);
+  color: var(--text-secondary);
+}
+
+.app-footer a {
+  color: var(--primary-color);
+}

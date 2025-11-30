@@ -1,0 +1,62 @@
+@import './styles/primeng-theme.css';
+@import './styles/primeng-core.css';
+@import 'primeicons/primeicons.css';
+@import 'primeflex/primeflex.css';
+
+:root {
+  --background: #0f1115;
+  --surface-card: #161a21;
+  --surface-border: #2a2f3a;
+  --text-color: #e6e8ec;
+  --text-secondary: #aab0bd;
+  --primary-color: #5b8def;
+  --accent: #7cd4ff;
+}
+
+body {
+  margin: 0;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  background: var(--background);
+  color: var(--text-color);
+  line-height: 1.6;
+}
+
+.section { margin-bottom: 3rem; }
+
+.muted { color: var(--text-secondary); }
+
+a {
+  color: var(--primary-color);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+h1, h2, h3 {
+  margin: 0 0 0.75rem;
+}
+
+p {
+  margin: 0 0 0.35rem;
+}
+
+.card-surface {
+  background: var(--surface-card);
+  border: 1px solid var(--surface-border);
+  border-radius: 14px;
+  padding: 1rem;
+}
+
+.grid-gap {
+  display: grid;
+  gap: 1rem;
+}
+
+.divider {
+  height: 1px;
+  width: 100%;
+  background: var(--surface-border);
+  margin: 1.5rem 0;
+}

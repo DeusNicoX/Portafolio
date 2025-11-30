@@ -1,0 +1,20 @@
+<p-menubar [model]="items" class="app-menubar">
+  <ng-template pTemplate="start">
+    <span class="brand">Nicolás Sáenz | Backend</span>
+  </ng-template>
+</p-menubar>
+
+<main class="app-content">
+  <div class="page-container">
+    <router-outlet></router-outlet>
+  </div>
+</main>
+
+<footer class="app-footer">
+  <div>© {{ year }} Nicolás Sáenz. Todos los derechos reservados.</div>
+  <div class="links">
+    <a href="https://www.linkedin.com" target="_blank" rel="noreferrer">LinkedIn</a>
+    <a href="https://github.com" target="_blank" rel="noreferrer">GitHub</a>
+    <a href="mailto:contacto@example.com">Correo</a>
+  </div>
+</footer>

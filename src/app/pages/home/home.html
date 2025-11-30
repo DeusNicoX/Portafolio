@@ -1,0 +1,50 @@
+<section class="hero">
+  <div class="hero__text">
+    <p class="eyebrow">Backend Developer</p>
+    <h1>Desarrollador BackEnd .NET | SQL Server | IIS</h1>
+    <p class="lead">
+      Especialista en APIs seguras y optimización de bases de datos. Diseño soluciones robustas y mantenibles.
+    </p>
+    <div class="cta">
+      <a pButton label="Descargar CV" class="p-button-outlined" href="assets/cv-nicolas-saenz.pdf" target="_blank"></a>
+      <a pButton label="Ver Proyectos" routerLink="/portafolio" class="p-button-primary"></a>
+      <a pButton label="Contáctame" routerLink="/contacto" class="p-button-secondary"></a>
+    </div>
+    <ul class="highlights">
+      <li>APIs REST con .NET 7/8 e identidad.</li>
+      <li>Consultas optimizadas y planes de ejecución en SQL Server.</li>
+      <li>Automatización de despliegues en IIS con CI/CD.</li>
+    </ul>
+  </div>
+  <div class="hero__media">
+    <div class="placeholder">
+      <span>Área para video o imagen destacada</span>
+    </div>
+  </div>
+</section>
+
+<section class="stats">
+  <h2>Estadísticas rápidas</h2>
+  <p class="muted">Resultados clave de mis proyectos</p>
+  <div class="grid">
+    <div class="card" *ngFor="let s of stats">
+      <span class="label">{{ s.label }}</span>
+      <span class="value">{{ s.value }}</span>
+    </div>
+  </div>
+</section>
+
+<section class="featured">
+  <div class="header">
+    <h2>Proyectos destacados</h2>
+    <a routerLink="/portafolio" class="link">Ver todo</a>
+  </div>
+  <div class="grid">
+    <p-card *ngFor="let p of featured" [header]="p.nombre" [subheader]="p.rol" class="project-card">
+      <img [src]="p.portada" [alt]="p.nombre" class="cover" />
+      <p>{{ p.descripcion }}</p>
+      <p-chip *ngFor="let tech of p.tecnologias" [label]="tech" class="tech"></p-chip>
+      <a pButton label="Ver detalle" [routerLink]="['/proyecto', p.id]" class="p-button-sm p-button-text"></a>
+    </p-card>
+  </div>
+</section>

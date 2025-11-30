@@ -1,0 +1,35 @@
+<section class="section contact">
+  <header class="section-head">
+    <p class="muted">Contacto</p>
+    <h2>Hablemos</h2>
+    <p class="muted">Completa el formulario o utiliza los enlaces directos.</p>
+  </header>
+
+  <div class="contact-grid">
+    <div class="form card-surface">
+      <h3>Formulario</h3>
+      <form [formGroup]="form" (ngSubmit)="enviar()">
+        <label>Nombre</label>
+        <input pInputText formControlName="nombre" />
+        <small *ngIf="submitted && form.controls.nombre.invalid" class="error">Nombre obligatorio (3+ caracteres).</small>
+
+        <label>Email</label>
+        <input pInputText formControlName="email" />
+        <small *ngIf="submitted && form.controls.email.invalid" class="error">Email inválido.</small>
+
+        <label>Mensaje</label>
+        <textarea pInputTextarea rows="5" formControlName="mensaje"></textarea>
+        <small *ngIf="submitted && form.controls.mensaje.invalid" class="error">Mensaje mínimo 10 caracteres.</small>
+
+        <button pButton type="submit" label="Enviar" class="p-button-primary"></button>
+      </form>
+    </div>
+
+    <div class="links card-surface">
+      <h3>Enlaces</h3>
+      <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com" target="_blank">linkedin.com/in/tu-perfil</a></p>
+      <p><strong>GitHub:</strong> <a href="https://github.com" target="_blank">github.com/tu-usuario</a></p>
+      <p><strong>Correo:</strong> <a href="mailto:contacto@example.com">contacto@example.com</a></p>
+    </div>
+  </div>
+</section>

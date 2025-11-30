@@ -1,0 +1,44 @@
+.section-head { text-align: center; margin-bottom: 1.5rem; }
+
+.grid.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1rem;
+}
+
+.project-card {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.cover.placeholder {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  border-radius: 10px;
+  border: 1px dashed var(--surface-border);
+  background: linear-gradient(135deg, rgba(255,255,255,0.06), rgba(255,255,255,0.02));
+  background-size: cover;
+  background-position: center;
+}
+
+.title-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+
+.year {
+  padding: 0.15rem 0.5rem;
+  border-radius: 999px;
+  background: var(--surface-border);
+  color: var(--text-secondary);
+  font-size: 0.85rem;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem;
+  margin: 0.4rem 0 0.6rem;
+}

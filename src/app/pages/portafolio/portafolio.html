@@ -1,0 +1,26 @@
+<section class="section">
+  <header class="section-head">
+    <p class="muted">Proyectos</p>
+    <h2>Portafolio</h2>
+    <p class="muted">Selección de desarrollos backend y automatizaciones.</p>
+  </header>
+  <div class="grid cards">
+    <p-card *ngFor="let p of projects" class="project-card card-surface">
+      <div class="cover placeholder" [ngStyle]="{'background-image': 'url(' + p.portada + ')'}"></div>
+      <div class="project-body">
+        <div class="title-row">
+          <div>
+            <h3>{{ p.nombre }}</h3>
+            <p class="muted">{{ p.rol }}</p>
+          </div>
+          <span class="year">{{ p.anio }}</span>
+        </div>
+        <p>{{ p.descripcion }}</p>
+        <div class="tags">
+          <p-chip *ngFor="let tech of p.tecnologias" [label]="tech"></p-chip>
+        </div>
+        <a pButton label="Ver detalle" [routerLink]="['/proyecto', p.id]" class="p-button-text"></a>
+      </div>
+    </p-card>
+  </div>
+</section>
